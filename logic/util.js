@@ -2,11 +2,11 @@ function Util() {
 
  function calculateTotalDistributedPassengers(){
 
-    let obj = distributeAllSeatsToPassengers();
+    // let obj = distributeAllSeatsToPassengers();
 
-    let totalPassengers = obj.vipWithBusiness + obj.vipWithEcono + obj.regWithBusiness + obj.regWithEcono;
+    // let totalPassengers = obj.vipWithBusiness + obj.vipWithEcono + obj.regWithBusiness + obj.regWithEcono;
 
-    return totalPassengers;
+    // return totalPassengers;
 
  }
 
