@@ -1,12 +1,13 @@
+const { distributeAllSeatsToAllPassengers } = require("./passengers");
+
 function Util() {
 
- function calculateTotalDistributedPassengers(){
+ function calculateTotalDistributedPassengers(object){
 
-    // let obj = distributeAllSeatsToPassengers();
 
-    // let totalPassengers = obj.vipWithBusiness + obj.vipWithEcono + obj.regWithBusiness + obj.regWithEcono;
+    let totalPassengers = object.vipPassengersWithBusinessSeats + object.vipPassengersWithEconomySeats + object.regularPassengersWithBusinessSeats + object.regularPassengersWithEconomySeats;
 
-    // return totalPassengers;
+    return totalPassengers;
 
  }
 
