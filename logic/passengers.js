@@ -50,10 +50,7 @@ function Passengers() {
            econoSeatsLeft < regularPassengers ? object.regularPassengersWithEconomySeats = econoSeatsLeft : object.regularPassengersWithEconomySeats = regularPassengers;
        }
     }
-//     // object.vipPassengersWithEconomySeats = 10;
-//     // object.vipPassengersWithBusinessSeats = 10;
-// // object.regularPassengersWithBusinessSeats = 10;
-// object.regularPassengersWithEconomySeats = 10;
+
  return object;
 
    }
