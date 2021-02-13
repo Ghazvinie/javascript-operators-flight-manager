@@ -5,9 +5,9 @@ function Util() {
  function calculateTotalDistributedPassengers(object){
 
 
-    let totalPassengers = object.vipPassengersWithBusinessSeats + object.vipPassengersWithEconomySeats + object.regularPassengersWithBusinessSeats + object.regularPassengersWithEconomySeats;
+    let totalDistributedPassengers = object.vipPassengersWithBusinessSeats + object.vipPassengersWithEconomySeats + object.regularPassengersWithBusinessSeats + object.regularPassengersWithEconomySeats;
 
-    return totalPassengers;
+    return totalDistributedPassengers;
 
  }
 

@@ -4,12 +4,12 @@ function Passengers() {
         
         let totalPassengers = passengersArray.reduce((accumulator, current) => {
             return accumulator += current;
-        });
+        },0);
 
         if (totalPassengers <= flightCapacity){
             return totalPassengers;
         }else if (totalPassengers > flightCapacity){
-            throw Error();
+            throw new Error(`Flight capacity ${flightCapacity} has been exceeded.`);
         }
 
     }
@@ -45,8 +45,8 @@ function Passengers() {
        case (busSeatsLeft < 0) : {
            object.regularPassengersWithBusinessSeats = 0;
            object.vipPassengersWithBusinessSeats = businessSeats;
-           vipPassengers > economySeats ? object.vipPassengersWithEconomySeats = economySeats : object.vipPassengersWithEconomySeats = vipPassengers - businessSeats;
-           vipPassengers > economySeats ? object.regularPassengersWithEconomySeats = 0 : econoSeatsLeft = economySeats - vipPassengers;
+           businessSeats > economySeats ? object.vipPassengersWithEconomySeats = economySeats : object.vipPassengersWithEconomySeats = vipPassengers - businessSeats;
+           businessSeats > economySeats ? object.regularPassengersWithEconomySeats = 0 : econoSeatsLeft = economySeats - object.vipPassengersWithEconomySeats;
            econoSeatsLeft < regularPassengers ? object.regularPassengersWithEconomySeats = econoSeatsLeft : object.regularPassengersWithEconomySeats = regularPassengers;
        }
     }

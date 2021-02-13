@@ -1,18 +1,18 @@
 function Flights() {
  
     function calculateNumberOfFlights(passengerNum, flightCapacity){
-
-        if (passengerNum <= 0){
-           throw Error("The number of passengers must be a positive integer value");
+       let flights;
+        if (passengerNum < 0 || (!Number.isInteger(Number(passengerNum)))){
+           throw new Error("The number of passengers must be a positive integer value");
         } 
 
-        if (flightCapacity <= 0){
-            throw Error ("The capacity of the flight must be a positive integer value");
+        if (flightCapacity < 0 || (!Number.isInteger(Number(flightCapacity)))){
+            throw new Error ("The capacity of the flight must be a positive integer value");
         }
 
-        return passengerNum % flightCapacity === 0 
-        ? passengerNum / flightCapacity 
-        : Math.floor((passengerNum / flightCapacity + 1));
+        passengerNum % flightCapacity === 0 ? flights = passengerNum / flightCapacity : flights = Math.floor(passengerNum / flightCapacity) + 1;
+
+        return flights;
 
     }
 
@@ -37,7 +37,7 @@ function Flights() {
               string = "The revision needs to be done within the next month";
               break;
               case (totalDistance > distanceLimit) :
-                  throw Error(error);
+                  throw new Error(`Flight maximum allowed distance ${distanceLimit} exceeded.`);
        }
        return string;
     }
