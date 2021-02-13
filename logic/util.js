@@ -1,4 +1,3 @@
-module.imports = Passengers();
 function Util() {
 
  function calculateTotalDistributedPassengers(){
@@ -14,7 +13,7 @@ function Util() {
  function calculateTotalNumberOfPassengers(numbersArray){
     return numbersArray.reduce((acc,curr) => acc += curr,0);
  }
-return {calculateTotalDistributedPassengers, calculateTotalDistributedPassengers};
+return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers};
 }
 
-module.exports = {Util};
+module.exports = Util();

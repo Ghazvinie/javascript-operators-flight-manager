@@ -29,10 +29,10 @@ function Flights() {
     
     switch(true){
             case  (totalDistance <= (distanceLimit / 2)) : 
-             string = "The revision needs to be done within the next 3 month\'s";
+             string = "The revision needs to be done within the next 3 months";
               break;
             case (totalDistance > (distanceLimit / 2) && totalDistance <= (distanceLimit * 0.75)) :
-                string = "The revision needs to be done within the next 2 month\'s";
+                string = "The revision needs to be done within the next 2 months";
               break;
               case (totalDistance > (distanceLimit * 0.75) && totalDistance <= distanceLimit) :
               string = "The revision needs to be done within the next month";
