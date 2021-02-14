@@ -42,7 +42,6 @@ function Flights() {
        return string;
     }
 
- 
     return {calculateNumberOfFlights, checkAircraftRevision};
 }
 
