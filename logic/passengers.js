@@ -50,10 +50,6 @@ function Passengers() {
            econoSeatsLeft < regularPassengers ? object.regularPassengersWithEconomySeats = econoSeatsLeft : object.regularPassengersWithEconomySeats = regularPassengers;
        }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e1ceb1b76e746c3c4f89ca291530296c25b74d5
  return object;
 
    }
